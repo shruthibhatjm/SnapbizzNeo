@@ -17,8 +17,8 @@ import org.testng.annotations.BeforeSuite;
 import io.appium.java_client.windows.WindowsDriver;
 
 public class TestBase {
-	
-	
+
+
 
 	public WindowsDriver<WebElement> driver;
 	static Process p;
@@ -31,7 +31,7 @@ public class TestBase {
 	@BeforeSuite
 	public WindowsDriver<WebElement> setUp() throws IOException, InterruptedException {
 		PropertyConfigurator.configure(
-				"C:\\Users\\Snapbizz\\eclipse-workspace\\SnapbizzNeoAutomation\\src\\test\\java\\log4j.properties");
+				"C:\\Users\\snapbizz\\git\\repository\\SnapbizzNeoAutomation\\src\\test\\java\\log4j.properties");
 		if (driver == null) {
 			try {
 				fis = new FileInputStream(

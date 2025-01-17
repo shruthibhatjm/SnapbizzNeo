@@ -21,14 +21,13 @@ import io.appium.java_client.windows.WindowsElement;
 public class EndToEndTesting extends TestBase {
 
 
-	@Test
+	@Test(priority = 0)
 	public void Login() throws InterruptedException {
 
 		log.debug("Inside LoginTest");
 		Actions actions = new Actions(driver);
 
-		//WindowsElement Login = (WindowsElement) driver.findElementByClassName(OR.getProperty("LoginPage"));
-		//Login.click();
+		
 
 		WindowsElement UN = (WindowsElement) driver.findElementByAccessibilityId(OR.getProperty("UN"));
 		UN.clear();
@@ -47,13 +46,13 @@ public class EndToEndTesting extends TestBase {
 	
 	
 		//Biller opening cash
-	@Test
+	@Test(priority = 1)
 	public void BillerOpeningCash() throws InterruptedException{
 		
 		WindowsElement cash2000 = (WindowsElement) driver.findElementByAccessibilityId(OR.getProperty("Cash2000"));
 		cash2000.clear();
 		cash2000.sendKeys(TestData.getProperty("REGCash2000"));
-		WindowsElement cash500 = (WindowsElement) driver.findElementByAccessibilityId(OR.getProperty("Cash500"));
+	    WindowsElement cash500 = (WindowsElement) driver.findElementByAccessibilityId(OR.getProperty("Cash500"));
 		cash500.clear();
 		cash500.sendKeys(TestData.getProperty("REGCash500"));
 		WindowsElement cash200 = (WindowsElement) driver.findElementByAccessibilityId(OR.getProperty("Cash200"));
@@ -83,7 +82,7 @@ public class EndToEndTesting extends TestBase {
 	}
 	
 	//adding products to myStore
-	@Test
+	@Test(priority = 2)
 	public void AddMasters() throws InterruptedException{
 	
 		WindowsElement Navigation = (WindowsElement) driver.findElementByName(OR.getProperty("OpenMenu"));
@@ -249,7 +248,7 @@ public class EndToEndTesting extends TestBase {
 		Cancel.click();
 	}
 		// Adding customers
-	@Test
+	@Test(priority = 3)
 	public void Customers() throws InterruptedException{
 		
 		WindowsElement Navigation = (WindowsElement) driver.findElementByName(OR.getProperty("OpenMenu"));
@@ -297,7 +296,7 @@ public class EndToEndTesting extends TestBase {
 	}
 	
 		 //Making bills
-	@Test
+	@Test(priority = 4)
 	public void Bills() throws InterruptedException{
 		
 		WindowsElement Navigation = (WindowsElement) driver.findElementByName(OR.getProperty("OpenMenu"));
@@ -537,7 +536,7 @@ public class EndToEndTesting extends TestBase {
 	}
 
 		// Add Distributors
-	@Test
+	@Test(priority = 5)
 	public void Distributors() throws InterruptedException{
 
 		WindowsElement Navigation = (WindowsElement) driver.findElementByName(OR.getProperty("OpenMenu"));
@@ -584,11 +583,11 @@ public class EndToEndTesting extends TestBase {
 
 
 		//Purchase order
-	@Test
+	@Test(priority = 6)
 	public void Purchase() throws InterruptedException{
 		
 			WindowsElement Navigation = (WindowsElement) driver.findElementByName(OR.getProperty("OpenMenu"));
-			Navigation.click();
+			
 			Navigation.click();
 			
 			WindowsElement Inventory = (WindowsElement) driver.findElementByName(OR.getProperty("Inventory"));
@@ -875,7 +874,7 @@ public class EndToEndTesting extends TestBase {
 		}
 
 		//Logging out
-		@Test
+		@Test(priority = 7)
 		public void Logout() throws InterruptedException{
 		
 		WindowsElement Admin = (WindowsElement) driver.findElementByName(OR.getProperty("Admin"));

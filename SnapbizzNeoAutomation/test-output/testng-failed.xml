@@ -7,7 +7,14 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="RegressionTesting"/>
+          <include name="Login"/>
+          <include name="BillerOpeningCash"/>
+          <include name="Customers"/>
+          <include name="Logout"/>
+          <include name="Purchase"/>
+          <include name="Distributors"/>
+          <include name="AddMasters"/>
+          <include name="Bills"/>
         </methods>
       </class> <!-- com.SNBN.testcases.EndToEndTesting -->
     </classes>
